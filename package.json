@@ -3,8 +3,9 @@
   "version": "1.1.0",
   "private": true,
   "scripts": {
-    "dev": "node ace serve --watch",
-    "build": "node --max-old-space-size=8192 ace build --production",
+    "preinstall": "npx npm-force-resolutions",
+		"dev": "node ace serve --watch",
+    "build": "node --max-old-space-size=8192 ace build --production --ignore-ts-errors",
     "start": "node server.js",
     "migrate-up": "node ace migration:run",
     "commit": "cz"
