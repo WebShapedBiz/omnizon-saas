@@ -5,7 +5,7 @@
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
 		"dev": "node ace serve --watch",
-    "build": "node ace build --production --ignore-ts-errors",
+    "build": "node --max-old-space-size=8192 ace build --production --ignore-ts-errors",
     "start": "node server.js",
     "migrate-up": "node ace migration:run",
     "commit": "cz"
