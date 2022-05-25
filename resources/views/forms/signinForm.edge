@@ -3,7 +3,7 @@
 
   @if(flashMessages.has('auth.errors.uid') || flashMessages.has('auth.errors.password'))
   <div class="alert alert-danger">
-    Invalid identifier or password
+    Neispravan email i/ili lozinka
   </div>
   @endif
 
@@ -19,11 +19,11 @@
 
   <div class="d-grid gap-2 mt-4">
     <button type="submit" class="btn btn-primary">
-      Login
+      Prijava
     </button>
   </div>
 
   <div class="text-center mt-3">
-    <a href="/forgot-password">Forgot password ?</a>
+    <a href="/forgot-password">Zaboravili lozinku?</a>
   </div>
 </form>

@@ -2,7 +2,7 @@
   {{ csrfField() }}
 
   <div class="form-group">
-    <label for="name"><strong>Name</strong></label>
+    <label for="name"><strong>Ime i prezime</strong></label>
     <input id="name" type="text" name="name" value="{{flashMessages.get('name') ? flashMessages.get('name') : ""}}" class="form-control" autocomplete="username" required>
     @if(flashMessages.has('errors.name'))
     <div class="invalid-feedback d-block">
@@ -12,7 +12,7 @@
   </div>
 
   <div class="form-group mt-3">
-    <label for="email"><strong>Email</strong></label>
+    <label for="email"><strong>Email adresa</strong></label>
     <input id="email" type="email" name="email" value="{{flashMessages.get('email') ? flashMessages.get('email') : ""}}" class="form-control" autocomplete="email" required>
     @if(flashMessages.has('errors.email'))
     <div class="invalid-feedback d-block">
@@ -27,7 +27,7 @@
 
   <div class="d-grid gap-2">
     <button type="submit" class="btn btn-primary">
-      Create account
+      Registrirajte master račun
     </button>
   </div>
 
