@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "node ace serve --watch",
-    "build": "node ace build --production",
+    "build": "node --max-old-space-size=8192 ace build --production",
     "start": "node server.js",
     "migrate-up": "node ace migration:run",
     "commit": "cz"
