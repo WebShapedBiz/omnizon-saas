@@ -32,7 +32,7 @@ export default class SigninController {
         session.clear();
       }
     }
-    response.redirect("/");
+    response.redirect("/admin/users");
   }
   //logout
   public async destroy({ auth, response }: HttpContextContract) {

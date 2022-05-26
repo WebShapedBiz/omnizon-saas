@@ -1,9 +1,14 @@
 <form method="POST" action="{{ route('/signup') }}">
   {{ csrfField() }}
 
-  <div class="form-group">
-    <label for="name"><strong>Ime i prezime</strong></label>
-    <input id="name" type="text" name="name" value="{{flashMessages.get('name') ? flashMessages.get('name') : ""}}" class="form-control" autocomplete="username" required>
+   <div class="form-group">
+    <!--<label for="name"><strong>Ime i prezime</strong></label>-->
+    <input id="organization" type="text" name="organization" value="{{flashMessages.get('organization') ? flashMessages.get('organization') : ""}}" class="form-control" autocomplete="organization" placeholder="Naziv organizacije" required>
+  </div>
+	
+	<div class="form-group mt-3">
+    <!--<label for="name"><strong>Ime i prezime</strong></label>-->
+    <input id="name" type="text" name="name" value="{{flashMessages.get('name') ? flashMessages.get('name') : ""}}" class="form-control" autocomplete="username" placeholder="Ime i prezime" required>
     @if(flashMessages.has('errors.name'))
     <div class="invalid-feedback d-block">
       {{ flashMessages.get('errors.name') }}
@@ -12,8 +17,8 @@
   </div>
 
   <div class="form-group mt-3">
-    <label for="email"><strong>Email adresa</strong></label>
-    <input id="email" type="email" name="email" value="{{flashMessages.get('email') ? flashMessages.get('email') : ""}}" class="form-control" autocomplete="email" required>
+    <!--<label for="email"><strong>Email adresa</strong></label>-->
+    <input id="email" type="email" name="email" value="{{flashMessages.get('email') ? flashMessages.get('email') : ""}}" class="form-control" autocomplete="email" placeholder="Email adresa" required>
     @if(flashMessages.has('errors.email'))
     <div class="invalid-feedback d-block">
       {{ flashMessages.get('errors.email') }}
@@ -24,8 +29,13 @@
   @!component('components/fieldPassword', {
     confirmation: true,
   })
+	<div class="form-group mt-3">
+		<label class="checkbox-inline text-muted">
+      <input type="checkbox" value="" style="margin-right:20px;"><small>Slažem se sa <a href="/uvjeti-koristenja" target="_blank">Uvjetima korištenja usluge</a></small>
+    </label>
+	</div>
 
-  <div class="d-grid gap-2">
+  <div class="d-grid gap-2 mt-3">
     <button type="submit" class="btn btn-primary">
       Registrirajte master račun
     </button>

@@ -11,3 +11,16 @@
   gap: 0.5vw;
   position: relative;
 }
+
+.card-title {
+	text-align: center;
+}
+
+.card {
+	min-height: 400px;
+}
+
+dd.arrow {
+	text-align: center;
+	font-size: 1.5rem;
+}

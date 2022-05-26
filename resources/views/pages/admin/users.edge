@@ -4,60 +4,99 @@
 <div class="container">
   <div class="d-flex justify-content-between">
     <div class="">
-      <h1>Users</h1>
-    </div>
-    <div class="ml-auto">
-      <a href="/admin/users/create" class="btn btn-primary">✨ New user</a>
+      <h1>Partneri</h1>
     </div>
   </div>
   <div class="shadow-lg p-5">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Nom</th>
-          <th scope="col">Email</th>
-          <th scope="col">Email Verified</th>
-          <th scope="col">Blocked</th>
-          <th scope="col">Role</th>
-          <th scope="col">edit</th>
-          <th scope="col">delete</th>
-        </tr>
-      </thead>
-      <tbody>
-        @each(entity in entities)
-        <tr>
-          <td>
-            @if(entity.roles.includes('root'))
-            👑
-            @endif
-            {{ entity.name }} 
-          </td>
-          <td> {{ entity.email }} </td>
-          <td> {{ entity.email_verified ? 'yes': 'no' }} </td>
-          <td> {{ entity.blocked ? 'yes': 'no' }} </td>
-          <td> {{ entity.roles.join(',') }} </td>
-          <td> <a href="{{entity._editLink}}">Editer</a> </td>
-          <td>
-            @if(!entity.roles.includes('root'))
-              <a href="{{entity._deleteLink}}">Supprimer</a>
-            @endif
-          </td>
-        </tr>
-        @end
-      </tbody>
-    </table>
+    <div class="row">
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Webshaped Business OÜ</h5>
+						<p class="card-text"></p>
+						<dl class="row">
+							<dt class="col-sm-3">Adresa</dt>
+							<dd class="col-sm-9">Sepapaja tn 6, 15551 Tallinn</dd>
 
-    <div>
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          @each(anchor in entities.getUrlsForRange(1, entities.lastPage))
-          <li class="page-item">
-            <a class="page-link" href="{{ anchor.url }}">{{ anchor.page }}</a>
-          </li>
-          @endeach
-        </ul>
-      </nav>
-    </div>
+							<dt class="col-sm-3">Država</dt>
+							<dd class="col-sm-9">Estonia</dd>
+
+							<dt class="col-sm-3">OIB</dt>
+							<dd class="col-sm-9">EE101980304</dd>
+
+							<dt class="col-sm-3">Email</dt>
+							<dd class="col-sm-9">office@webshaped.biz</dd>
+							<hr/>
+							<dt class="col-sm-6">Format dokumenta</dt>
+							<dd class="col-sm-6">UBL 2.1</dd>
+							
+							<dt class="col-sm-6">Access point</dt>
+							<dd class="col-sm-6">Omnizon</dd>
+						</dl>
+					</div>
+					<div class="text-center mb-3">
+						<a href="#" class="btn btn-primary">Uredi podatke</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Dokumenti u izmjeni</h5>
+						<p class="card-text"></p>
+						<dl class="row">
+							<dt class="col-sm-6">Order</dt>
+							<dd class="col-sm-6 arrow"><i class="bi bi-arrow-left-right"></i></dd>
+
+							<dt class="col-sm-6">Order confirmation</dt>
+							<dd class="col-sm-6 arrow"><i class="bi bi-arrow-left"></i></dd>
+
+							<dt class="col-sm-6">Shipment</dt>
+							<dd class="col-sm-6 arrow"><i class="bi bi-arrow-right"></i></dd>
+
+							<dt class="col-sm-6">Receipt</dt>
+							<dd class="col-sm-6 arrow"><i class="bi bi-arrow-left-right"></i></dd>
+					
+							<dt class="col-sm-6">Invoice</dt>
+							<dd class="col-sm-6 arrow"><i class="bi bi-arrow-right"></i></dd>
+						</dl>
+					</div>
+					<div class="text-center mb-3">
+						<a href="#" class="btn btn-primary">Uredi podatke</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Asis d.o.o.</h5>
+						<p class="card-text"></p>
+						<dl class="row">
+							<dt class="col-sm-3">Adresa</dt>
+							<dd class="col-sm-9">Siget 6, 10000 Zagreb</dd>
+
+							<dt class="col-sm-3">Država</dt>
+							<dd class="col-sm-9">Hrvatska</dd>
+
+							<dt class="col-sm-3">OIB</dt>
+							<dd class="col-sm-9">HR32561966708</dd>
+
+							<dt class="col-sm-3">Email</dt>
+							<dd class="col-sm-9">info@asis.hr</dd>
+							<hr/>
+							<dt class="col-sm-6">Format dokumenta</dt>
+							<dd class="col-sm-6">EDIFACT</dd>
+							
+							<dt class="col-sm-6">Access point</dt>
+							<dd class="col-sm-6">Own<br/>(sftp://192.168.0.1)</dd>
+						</dl>
+					</div>
+					<div class="text-center mb-3">
+						<a href="#" class="btn btn-primary">Uredi podatke</a>
+					</div>
+				</div>
+			</div>
+		</div>
   </div>
 </div>
 @endsection

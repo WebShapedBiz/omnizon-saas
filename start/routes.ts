@@ -23,6 +23,9 @@ import Route from "@ioc:Adonis/Core/Route";
 Route.get("/", async ({ view }) => {
   return view.render("pages/home");
 });
+Route.get("uvjeti-koristenja", async ({ view }) => {
+  return view.render("pages/uvjeti-koristenja");
+});
 
 Route.get("signup", "SignupController.signupForm");
 Route.post("signup", "SignupController.submitSignupForm");

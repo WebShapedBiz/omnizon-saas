@@ -1,7 +1,7 @@
 @layout('layouts/main')
 
 @section('title')
-Mon compte
+Moj račun
 @endsection
 
 @section('content')
@@ -11,10 +11,10 @@ Mon compte
       <div class="col-sm-6 offset-sm-3">
         <div class="d-flex justify-content-between">
           <div class="">
-            <h1>Mon compte</h1>
+            <h1>Moj račun</h1>
           </div>
           <div class="ml-auto">
-            <a href="/profile/{{entity.id}}/edit" class="btn btn-primary">Éditer</a>
+            <a href="/profile/{{entity.id}}/edit" class="btn btn-primary">Uređivanje</a>
           </div>
         </div>
         <div class="shadow-lg rounded p-5">
@@ -23,9 +23,9 @@ Mon compte
             @if(entity.picture)
             <img src="{{await driveUrl(entity.picture)}}" width="200"/> <br />
             @endif
-            {{entity.email}} <br />
+            Email: {{entity.email}} <br />
             @each(roleId in entity.roles)
-              <span>{{ roles.find(r => r.id === roleId).label }}</span>
+              Uloga: <span>{{ roles.find(r => r.id === roleId).label }}</span>
             @end
           </p>
         </div>
