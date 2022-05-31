@@ -9,12 +9,13 @@
       <ul class="navbar-nav mr-auto">
 
         @if(auth.isLoggedIn)
-          <!--<li class="nav-item">
+				<!--
+          <li class="nav-item">
             <a class="nav-link" href="/admin/posts">📝 Objave</a>
           </li>-->
           @can('adminListUsers')
             <li class="nav-item">
-              <a class="nav-link" href="/admin/users">👥 Partneri</a>
+              <a class="nav-link" href="/admin/users">👥 Konfiguracija</a>
             </li>
           @end
         @endif
@@ -32,7 +33,7 @@
         @if(auth.isLoggedIn)
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">  
-            👋 Vozdra {{auth.user.name}} ({{auth.user.roles.join(',')}})
+            👋 Pozdrav {{auth.user.name}} ({{auth.user.roles.join(',')}})
           </a>
           <ul class="dropdown-menu" aria-labelledby="dropdown03">
             <li><a class="dropdown-item" href="/profile/{{auth.user.id}}">Moj račun</a></li>

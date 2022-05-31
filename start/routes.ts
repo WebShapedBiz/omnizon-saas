@@ -90,6 +90,11 @@ Route.resource("/admin/users", "AdminUsersController").middleware({
   "*": "auth",
 });
 
+// configuration admin
+Route.resource("/admin/configuration", "AdminConfigurationController").middleware({
+  "*": "auth",
+});
+
 Route.resource("/profile", "profileController")
   .middleware({
     "*": "auth",
